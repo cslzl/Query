@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>keyup keydown 事件</title>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+    </head>
+    <body>
+        <h1>keyup, keydown 事件 demo:</h1>
+        <div>
+            输入你的名字: <input>
+            <p>在以上输入框中输入你的名字. 在按键按下或起来时输入框背景颜色会改变</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('input').keydown(function() {
+                    $('input').css('background-color', 'yellow')
+                })
+                $('input').keyup(function() {
+                    $('input').css('background-color', 'pink')
+                })
+            })
+        </script>
+    </body>
+</html>

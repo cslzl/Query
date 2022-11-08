@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>mouseup 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+    </head>
+    <body>
+        <h1>mouseup 事件 demo:</h1>
+        <div>
+            <p>测试段落 (鼠标在段落上松开会有弹窗)</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('p').mouseup(function() {
+                    alert('鼠标在该段落上松开')
+                })
+            })
+        </script>
+    </body>
+</html>

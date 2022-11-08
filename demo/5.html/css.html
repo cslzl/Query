@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>css 操作</title>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+    </head>
+    <body>
+        <h1>css 操作 demo:</h1>
+        <div>
+            <p style="background-color:#ff0000">这是一个段落</p>
+            <p style="background-color:#00ff00">这是一个段落</p>
+            <p style="background-color:#0000ff">这是一个段落</p>
+            <button id="button-get">返回第一个 p 元素的 background-color</button>
+            <button id="button-set">设置 p 元素的 background-color</button>
+            <button id="button-multiple">为 p 元素设置多个样式</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('#button-get').click(function() {
+                    alert(`背景颜色 = ${$('p').css('background-color')}`)
+                })
+                $('#button-set').click(function() {
+                    $('p').css('background-color', 'yellow')
+                })
+                $('#button-multiple').click(function() {
+                    $('p').css({
+                        'background-color': 'yellow',
+                        'font-size': '200%',
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

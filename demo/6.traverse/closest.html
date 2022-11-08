@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>祖先遍历-第一个匹配的祖先元素</title>
+        <style>
+            .ancestors *{
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+        </style>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+        <script src="../../src/traverse/traverse_parent.js"></script>
+    </head>
+    <body>
+        <h1>祖先遍历-第一个匹配的祖先元素 demo:</h1>
+        <div>
+            <div class="ancestors">
+                <div style="width:500px;">div (曾祖先节点)
+            		<ul>ul (第二祖先 - 第二祖先节点)
+            			<ul>ul (第一祖先 - 第一祖先节点)
+            				<li>li (直接父节点)
+            					<span>span</span>
+            				</li>
+            			</ul>
+            		</ul>
+            	</div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('span').closest('ul').css({
+                    'color': 'red',
+                    'border': '2px solid red',
+                })
+            })
+        </script>
+    </body>
+</html>

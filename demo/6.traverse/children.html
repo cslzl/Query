@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>后代遍历-所有直接子元素及过滤</title>
+        <style>
+            .descendants *{
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+        </style>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+        <script src="../../src/traverse/traverse_children.js"></script>
+    </head>
+    <body>
+        <h1>后代遍历-所有直接子元素及过滤 demo:</h1>
+        <div>
+            <div class="descendants" style="width:500px;">div (当前元素)
+                <p class="a">p (儿子元素)
+                    <span>span (孙子元素)</span>
+                </p>
+                <p class="b">p (儿子元素)
+                    <span>span (孙子元素)</span>
+                </p>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('.descendants').children().css({
+                    'color': 'red',
+                    'border': '2px solid red',
+                })
+                $('.descendants').children('p.a').css({
+                    'background': 'lightblue',
+                })
+            })
+        </script>
+    </body>
+</html>

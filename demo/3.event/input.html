@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>input 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_get_set.js"></script>
+    </head>
+    <body>
+        <h1>input 事件 demo:</h1>
+        <div>
+            <p>jQuery 原本没有此事件, 但原生 DOM 有, 很实用, 故加上</p>
+            <input>
+            <p id="p-test">你输入的是</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('input').input(function(event) {
+                    $('#p-test').html(`你输入的是 ${event.target.value}`)
+                })
+            })
+        </script>
+    </body>
+</html>

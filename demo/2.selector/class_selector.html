@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>class 选择器</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/effect/effect_hide_show.js"></script>
+    </head>
+    <body>
+        <h1>class 选择器 demo:</h1>
+        <div>
+            <p class="test">测试段落1 (将隐藏)</p>
+            <p class="test">测试段落2 (将隐藏)</p>
+            <p>测试段落3 (将保留)</p>
+            <button id="button-test">测试</button>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-test').click(function() {
+                    $('.test').hide()
+                })
+            })
+        </script>
+    </body>
+</html>

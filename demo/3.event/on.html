@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>on() 方法</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+    </head>
+    <body>
+        <h1>on() 方法 demo:</h1>
+        <div>
+            <p>点击这个段落</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('p').on('click', function() {
+                    alert('段落被点击了')
+                })
+            })
+        </script>
+    </body>
+</html>

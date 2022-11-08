@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>过滤-eq</title>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+        <script src="../../src/traverse/traverse_filter.js"></script>
+    </head>
+    <body>
+        <h1>过滤-eq demo:</h1>
+        <div>
+            <p>这是段落 1</p>
+            <p>这是段落 2</p>
+            <p>这是段落 3</p>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('p').eq(1).css('background-color', 'yellow')
+            })
+        </script>
+    </body>
+</html>

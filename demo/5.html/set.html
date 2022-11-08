@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>设置内容和属性</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_get_set.js"></script>
+    </head>
+    <body>
+        <h1>设置内容和属性 demo:</h1>
+        <div>
+            <p id="p-test1">这是一个段落</p>
+            <p id="p-test2">这是另外一个段落</p>
+            <p>输入框: <input id="input-test" value="世界你好"></p>
+            <p><a id="a-test" href='https://www.baidu.com' target="_blank">将会由百度改为谷歌(可以点击查看)</a></p>
+            <button id="button-text">设置文本</button>
+            <button id="button-html">设置 HTML</button>
+            <button id="button-val">设置值</button>
+            <button id="button-attr">修改 href 的值</button>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-text').click(function() {
+                    $('#p-test1').text('Hello World!')
+                })
+                $('#button-html').click(function() {
+                    $('#p-test2').html('<b>Hello World!</b>')
+                })
+                $('#button-val').click(function() {
+                    $('#input-test').val('Query')
+                })
+                $('#button-attr').click(function() {
+                    $('#a-test').attr('href', 'http://g.cn')
+                })
+            })
+        </script>
+    </body>
+</html>

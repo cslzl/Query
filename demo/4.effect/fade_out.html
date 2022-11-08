@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fadeOut 效果</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/effect/effect_hide_show.js"></script>
+        <script src="../../src/effect/effect_fade_xx.js"></script>
+    </head>
+    <body>
+        <h1>fadeOut 效果 demo:</h1>
+        <div>
+            <button id="button-fadeout">点击淡出 div 元素</button>
+            <br><br>
+            <div id="div-1" style="width:80px;height:80px;background-color:red;"></div>
+            <br>
+            <div id="div-2" style="width:80px;height:80px;background-color:green;"></div>
+            <br>
+            <div id="div-3" style="width:80px;height:80px;background-color:blue;"></div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-fadeout').click(function() {
+                    $('#div-1').fadeOut()
+                    $('#div-2').fadeOut("slow")
+                    $('#div-3').fadeOut(3000)
+                })
+            })
+        </script>
+    </body>
+</html>

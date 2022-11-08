@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>mouseleave 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+    </head>
+    <body>
+        <h1>mouseleave 事件 demo:</h1>
+        <div>
+            <p>测试段落 (鼠标从上面移开会有弹窗)</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('p').mouseleave(function() {
+                    alert('鼠标从 p 元素上移开了')
+                })
+            })
+        </script>
+    </body>
+</html>

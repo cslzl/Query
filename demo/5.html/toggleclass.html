@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>toggleClass 操作</title>
+        <style>
+            .important {
+            	font-weight: bold;
+            	font-size: xx-large;
+            }
+            .blue {
+            	color:blue;
+            }
+        </style>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_class.js"></script>
+    </head>
+    <body>
+        <h1>toggleClass 操作 demo:</h1>
+        <div>
+            <h1 id="h1-test" class="blue">标题 1</h1>
+            <h2 class="blue">标题 2</h2>
+            <p class="blue">这是一个段落。</p>
+            <p>这是另外一个段落。</p>
+            <br>
+            <button>切换 class</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('button').click(function() {
+                    $('#h1-test, h2, p').toggleClass('blue')
+                })
+            })
+        </script>
+    </body>
+</html>

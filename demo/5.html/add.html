@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>添加元素</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_add.js"></script>
+    </head>
+    <body>
+        <h1>添加元素(支持多元素) demo:</h1>
+        <div>
+            <ol>
+                <li>列表 1</li>
+                <li>列表 2</li>
+                <li>列表 3</li>
+            </ol>
+            <br>
+            <button id="button-1">元素内末尾添加</button>
+            <button id="button-2">元素内开头添加</button>
+            <button id="button-3">元素外末尾添加</button>
+            <button id="button-4">元素外开头添加</button>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-1').click(function() {
+                    $('ol').append('<li>追加文本</li>')
+                })
+                $('#button-2').click(function() {
+                    $('ol').prepend('<li>追加文本</li>')
+                })
+                $('#button-3').click(function() {
+                    $('ol').after('hello', 'world')
+                })
+                $('#button-4').click(function() {
+                    $('ol').before('hello', 'world')
+                })
+            })
+        </script>
+    </body>
+</html>

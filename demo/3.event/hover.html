@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hover 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+    </head>
+    <body>
+        <h1>hover 事件 demo:</h1>
+        <div>
+            <p>测试段落</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('p').hover(
+                    function() {
+                        console.log('进入段落')
+                    },
+                    function() {
+                        console.log('离开段落')
+                    }
+                )
+            })
+        </script>
+    </body>
+</html>

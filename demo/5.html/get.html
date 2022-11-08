@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>获得内容和属性</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_get_set.js"></script>
+    </head>
+    <body>
+        <h1>获得内容和属性 demo:</h1>
+        <div>
+            <p id="p-test">这是段落中的 <b>粗体</b> 文本.</p>
+            <p>名称: <input id="input-test" value="hello"></p>
+            <p><a id="a-test" href="www.baidu.com">百度</a></p>
+            <button id="button-text">显示文本</button>
+            <button id="button-html">显示 HTML</button>
+            <button id="button-val">显示值</button>
+            <button id="button-attr">显示 href 属性的值</button>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-text').click(function() {
+                    alert(`Text: ${$('#p-test').text()}`)
+                })
+                $('#button-html').click(function() {
+                    alert(`HTML: ${$('#p-test').html()}`)
+                })
+                $('#button-val').click(function() {
+                    alert(`值为: ${$('#input-test').val()}`)
+                })
+                $('#button-attr').click(function() {
+                    alert($('#a-test').attr('href'))
+                })
+            })
+        </script>
+    </body>
+</html>

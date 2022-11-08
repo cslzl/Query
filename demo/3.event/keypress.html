@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>keypress 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_get_set.js"></script>
+    </head>
+    <body>
+        <h1>keypress 事件 demo:</h1>
+        <div>
+            输入你的名字: <input>
+            <p>按键的次数: <span>0</span></p>
+        </div>
+        <script>
+            let i = 0
+            $(document).ready(function() {
+                $('input').keypress(function() {
+                    i++
+                    $('span').html(i)
+                })
+            })
+        </script>
+    </body>
+</html>

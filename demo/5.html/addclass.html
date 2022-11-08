@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>addClass 操作</title>
+        <style>
+            .important {
+            	font-weight: bold;
+            	font-size: xx-large;
+            }
+            .blue {
+            	color:blue;
+            }
+        </style>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_class.js"></script>
+    </head>
+    <body>
+        <h1>addClass 操作 demo:</h1>
+        <div>
+            <h1 id="h1-test">标题 1</h1>
+            <h2>标题 2</h2>
+            <p>这是一个段落。</p>
+            <p>这是另外一个段落。</p>
+            <div id="div-test1">这是一些重要的 div 文本!</div>
+            <br>
+            <button id="button-1">为元素添加 class</button>
+            <hr>
+            <div id="div-test2">这是一些文本.</div>
+            <button id="button-2">添加多个 class</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('#button-1').click(function(){
+                    $('#h1-test, h2, p').addClass('blue')
+                    $('#div-test1').addClass('important')
+                })
+                $('#button-2').click(function() {
+                    $('#div-test2').addClass('important blue')
+                })
+            })
+        </script>
+    </body>
+</html>

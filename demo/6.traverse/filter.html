@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>过滤-filter</title>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+        <script src="../../src/traverse/traverse_filter.js"></script>
+    </head>
+    <body>
+        <h1>过滤-filter demo:</h1>
+        <div>
+            <p>这是段落 1</p>
+            <p class="dudu">这是段落 2</p>
+            <p>这是段落 3</p>
+            <p class="dudu">这是段落 4</p>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('p').filter('.dudu').css('background-color', 'yellow')
+            })
+        </script>
+    </body>
+</html>

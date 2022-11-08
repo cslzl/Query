@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>删除元素</title>
+        <style>
+            #div-1, #div-2 {
+                height: 100px;
+                width: 300px;
+                border: 1px solid black;
+                margin: 5px;
+                background-color: yellow;
+            }
+        </style>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_remove.js"></script>
+    </head>
+    <body>
+        <h1>删除元素 demo:</h1>
+        <div>
+            <div id="div-1">
+                这是 div1
+                <p>这是在 div1 中的一个段落。</p>
+                <p>这是在 div1 中的另外一个段落。</p>
+            </div>
+            <div id="div-2">
+                这是 div2
+                <p>这是在 div2 中的一个段落。</p>
+                <p>这是在 div2 中的另外一个段落。</p>
+            </div>
+            <br>
+            <button id="button-remove">移除 div 元素</button>
+            <button id="button-empty">清空 div 元素</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('#button-remove').click(function(){
+                    $('#div-1').remove()
+                })
+                $('#button-empty').click(function(){
+                    $('#div-2').empty()
+                })
+            })
+        </script>
+    </body>
+</html>

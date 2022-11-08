@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>fadeTo 效果</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/effect/effect_hide_show.js"></script>
+        <script src="../../src/effect/effect_fade_xx.js"></script>
+    </head>
+    <body>
+        <h1>fadeTo 效果 demo:</h1>
+        <div>
+            <button id="button-fadeto">点击使颜色变淡</button>
+            <br><br>
+            <div id="div-1" style="width:80px;height:80px;background-color:red;"></div>
+            <br>
+            <div id="div-2" style="width:80px;height:80px;background-color:green;"></div>
+            <br>
+            <div id="div-3" style="width:80px;height:80px;background-color:blue;"></div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-fadeto').click(function() {
+                    $('#div-1').fadeTo("slow", 0.15)
+                    $('#div-2').fadeTo("slow", 0.4)
+                    $('#div-3').fadeTo("slow", 0.7)
+                })
+            })
+        </script>
+    </body>
+</html>

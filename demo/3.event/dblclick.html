@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>dblclick 事件</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/effect/effect_hide_show.js"></script>
+    </head>
+    <body>
+        <h1>dblclick 事件 demo:</h1>
+        <div>
+            <p>测试段落1 (双击会消失)</p>
+            <p>测试段落2 (双击会消失)</p>
+            <p>测试段落3 (双击会消失)</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('p').dblclick(function() {
+                    $(this).hide()
+                })
+            })
+        </script>
+    </body>
+</html>

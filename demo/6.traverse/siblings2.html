@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>同胞遍历-所有同胞元素(加过滤)</title>
+        <style>
+            .siblings * {
+                display: block;
+                border: 2px solid lightgrey;
+                color: lightgrey;
+                padding: 5px;
+                margin: 15px;
+            }
+        </style>
+        <script src="../../src/utils/utils.js"></script>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_css.js"></script>
+        <script src="../../src/traverse/traverse_sibling.js"></script>
+    </head>
+    <body>
+        <h1>同胞遍历-所有同胞元素(加过滤) demo:</h1>
+        <div>
+            <div class="siblings">
+                <div>div (父元素)
+                    <p>p</p>
+                    <span>span</span>
+                    <h2>h2</h2>
+                    <h3>h3</h3>
+                    <p>p</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('h2').siblings('p').css({
+                    'color': 'red',
+                    'border': '2px solid red',
+                })
+            })
+        </script>
+    </body>
+</html>

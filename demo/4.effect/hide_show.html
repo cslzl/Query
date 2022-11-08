@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>hide show 效果</title>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/effect/effect_hide_show.js"></script>
+    </head>
+    <body>
+        <h1>hide show 效果 demo:</h1>
+        <div>
+            <p>测试段落 (点击隐藏按钮会消失)</p>
+            <button id="button-hide">隐藏</button>
+            <button id="button-show">显示</button>
+        </div>
+        <script>
+            $(document).ready(function() {
+                $('#button-hide').click(function() {
+                    $('p').hide()
+                })
+                $('#button-show').click(function() {
+                    $('p').show()
+                })
+            })
+        </script>
+    </body>
+</html>

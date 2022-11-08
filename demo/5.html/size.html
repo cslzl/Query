@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>尺寸</title>
+        <style>
+            #div-1, #div-2, #div-3 {
+                height: 100px;
+                width: 300px;
+                padding: 10px;
+                margin: 3px;
+                border: 1px solid blue;
+                background-color: lightblue;
+            }
+        </style>
+        <script src="../../src/_main.js"></script>
+        <script src="../../src/ready/ready.js"></script>
+        <script src="../../src/event/event.js"></script>
+        <script src="../../src/html/html_get_set.js"></script>
+        <script src="../../src/html/html_size.js"></script>
+    </head>
+    <body>
+        <h1>尺寸 demo:</h1>
+        <div>
+            <div id="div-1"></div>
+            <br>
+            <button id="button-1">显示 div1 元素的尺寸</button>
+            <hr>
+
+            <div id="div-2"></div>
+            <br>
+            <button id="button-2">显示 div2 元素的尺寸</button>
+            <hr>
+
+            <div id="div-3"></div>
+            <br>
+            <button id="button-3">显示 div3 元素的尺寸</button>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('#button-1').click(function() {
+                    let txt = `
+                        div1 的宽度是: ${$('#div-1').width()}<br>
+                        div1 的高度是: ${$('#div-1').height()}
+                    `
+                    $('#div-1').html(txt)
+                })
+                //
+                $('#button-2').click(function() {
+                    let txt = `
+                        div2 宽度: ${$("#div-2").width()}</br>
+                        div2 高度: ${$("#div-2").height()}</br>
+                        div2 宽度，包含内边距: ${$("#div-2").innerWidth()}</br>
+                        div2 高度，包含内边距: ${$("#div-2").innerHeight()}
+                    `
+                    $('#div-2').html(txt)
+                })
+                //
+                $('#button-3').click(function() {
+                    let txt = `
+                        div3 宽度: ${$("#div-3").width()}</br>
+                        div3 高度: ${$("#div-3").height()}</br>
+                        div3 宽度，包含内边距和边框: ${$("#div-3").outerWidth()}</br>
+                        div3 高度，包含内边距和边框: ${$("#div-3").outerHeight()}
+                    `
+                    $('#div-3').html(txt)
+                })
+            })
+        </script>
+    </body>
+</html>
